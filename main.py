@@ -10,7 +10,9 @@ os.environ['GENSIM_DATA_DIR'] = gensim_data_path
 # ^ must be done before we import gensim!
 import gensim.downloader
 
+
 initial_value = 9999
+
 
 def test_single_model(model_name='word2vec-google-news-300'):
     correct_counter = 0
@@ -57,6 +59,7 @@ def evaluating_similarities_without_guessing(similarities, answer_index, correct
         label = Label.Wrong
     return label, correct_counter, model_guess_index
 
+
 def evaluating_similarities_with_guessing(model, words_to_compare, answer, answer_index, correct_counter):
     lowest_score = initial_value
     model_guess_index = initial_value
@@ -82,6 +85,7 @@ def evaluating_similarities_with_guessing(model, words_to_compare, answer, answe
             label = Label.Wrong
     return label, correct_counter, model_guess_index
 
+
 def preprocess_words_to_compare(row, answer):
     words_to_compare = []
     answer_index = initial_value
@@ -94,8 +98,21 @@ def preprocess_words_to_compare(row, answer):
                 answer_index = int(key)
     return words_to_compare, answer_index
 
+
+def task_2_different_corpus():
+    test_single_model(model_name='fasttext-wiki-news-subwords-300')
+    test_single_model(model_name='glove-wiki-gigaword-300')
+
+
+def task_2_same_corpus():
+    test_single_model(model_name='glove-twitter-100')
+    test_single_model(model_name='glove-twitter-200')
+
+
 def main():
     test_single_model()
+    task_2_different_corpus()
+    task_2_same_corpus()
 
 
 if __name__ == '__main__':
