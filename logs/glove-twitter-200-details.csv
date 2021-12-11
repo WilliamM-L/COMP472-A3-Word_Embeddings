@@ -33,7 +33,7 @@ deftly,skillfully,skillfully,Label.Correct
 distribute,circulate,commercialize,Label.Wrong
 discrepancies,differences,differences,Label.Correct
 prolific,productive,promising,Label.Wrong
-unmatched,unequaled,unequaled,Label.Guess
+unmatched,unequaled,unrecognized,Label.Guess
 peculiarly,uniquely,uniquely,Label.Correct
 hue,color,color,Label.Correct
 hind,rear,hairy,Label.Wrong
@@ -51,7 +51,7 @@ slowly,gradually,gradually,Label.Correct
 built,constructed,constructed,Label.Correct
 tasks,jobs,materials,Label.Wrong
 unlikely,improbable,different,Label.Wrong
-halfheartedly,apathetically,apathetically,Label.Guess
+halfheartedly,apathetically,unconventionally,Label.Guess
 annals,chronicles,chronicles,Label.Correct
 wildly,furiously,furiously,Label.Correct
 hailed,acclaimed,acclaimed,Label.Correct
