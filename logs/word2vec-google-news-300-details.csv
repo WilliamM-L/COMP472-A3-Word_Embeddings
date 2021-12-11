@@ -61,7 +61,7 @@ prospective,potential,potential,Label.Correct
 generally,broadly,broadly,Label.Correct
 sustained,prolonged,prolonged,Label.Correct
 perilous,dangerous,dangerous,Label.Correct
-tranquillity,peacefulness,peacefulness,Label.Correct
+tranquillity,peacefulness,peacefulness,Label.Guess
 dissipate,disperse,disperse,Label.Correct
 primarily,chiefly,chiefly,Label.Correct
 colloquial,conversational,conversational,Label.Correct

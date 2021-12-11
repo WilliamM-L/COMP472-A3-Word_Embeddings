@@ -38,7 +38,8 @@ def test_single_model(model_name='word2vec-google-news-300'):
                     print('Guessing!')
                     label, correct_counter, model_guess_index = evaluating_similarities_with_guessing(model, words_to_compare, answer, answer_index, correct_counter)
 
-                logger.write(f'{question},{answer},{words_to_compare[model_guess_index]},{label}\n')
+                finally:
+                    logger.write(f'{question},{answer},{words_to_compare[model_guess_index]},{label}\n')
 
     with open('logs\\analysis.csv', 'a') as analysis_logger:
         analysis_logger.write(f'{model_name},{len(model)},{correct_counter},{non_guessing_counter},{correct_counter/non_guessing_counter}\n')
@@ -76,14 +77,7 @@ def evaluating_similarities_with_guessing(model, words_to_compare, answer, answe
         # got a KeyError for every invocation -> answer is unknown or all 4 guess words are unknown
         model_guess_index = random.randint(0, len(words_to_compare) - 1)
         # the label couldn't be Correct even if the guess is right since we don't even know one guess word or the answer word
-        label = Label.Guess
-    else:
-        if model_guess_index == answer_index:
-            label = Label.Correct
-            correct_counter += 1
-        else:
-            label = Label.Wrong
-    return label, correct_counter, model_guess_index
+    return Label.Guess, correct_counter, model_guess_index
 
 
 def preprocess_words_to_compare(row, answer):
