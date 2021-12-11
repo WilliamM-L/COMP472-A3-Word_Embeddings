@@ -41,7 +41,7 @@ highlight,accentuate,accentuate,Label.Correct
 hastily,hurriedly,hurriedly,Label.Correct
 temperate,mild,mild,Label.Correct
 grin,smile,smile,Label.Correct
-verbally,orally,orally,Label.Guess
+verbally,orally,orally,Label.Correct
 physician,doctor,doctor,Label.Correct
 essentially,basically,basically,Label.Correct
 keen,sharp,sharp,Label.Correct
@@ -51,7 +51,7 @@ slowly,gradually,gradually,Label.Correct
 built,constructed,constructed,Label.Correct
 tasks,jobs,jobs,Label.Correct
 unlikely,improbable,improbable,Label.Correct
-halfheartedly,apathetically,bipartisanly,Label.Guess
+halfheartedly,apathetically,customarily,Label.Guess
 annals,chronicles,chronicles,Label.Correct
 wildly,furiously,furiously,Label.Correct
 hailed,acclaimed,remembered,Label.Wrong
